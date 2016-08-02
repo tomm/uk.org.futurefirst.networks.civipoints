@@ -41,6 +41,7 @@ class CRM_Points_CivirulesAction extends CRM_CivirulesActions_Generic_Api {
   protected function alterApiParameters($parameters, CRM_Civirules_TriggerData_TriggerData $triggerData) {
     //this method could be overridden in subclasses to alter parameters to meet certain criteria
     $parameters['contact_id'] = $triggerData->getContactId();
+    $parameters['grantor_contact_id'] = 1;
 
     return $parameters;
   }
